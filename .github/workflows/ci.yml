@@ -43,7 +43,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip setuptools wheel
-        python -m pip install --editable .
+        python -m pip install --editable .[plots]
         python -m pip install pytest pytest-cov
 
     - name: List installed Python packages
