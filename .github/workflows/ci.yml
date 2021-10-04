@@ -53,9 +53,9 @@ jobs:
       run: |
         python -m pip list
 
-    - name: Post install checks
+    - name: Environment short summary
       run: |
-        python -c 'import skopt; print(f"skopt {skopt.__version__}")'
+        python -m pip list | grep 'numpy\|scipy\|scikit-learn\|scikit-optimize'
         python -c 'import multiprocessing as mp; print(f"{mp.cpu_count()} CPUs")'
 
     - name: Setup testing environment
